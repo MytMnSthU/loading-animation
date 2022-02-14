@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: sans-serif;
+	min-height: 100vh;
+	background-color: rgb(118, 178, 255);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3rem;
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #fff;	
+
+	position: absolute;
+	top: 100px;
+}
+
+.container {
+	width: 30px;
+	height: 30px;
+	/* background-color: red; */
+	border-radius: 50%;
+
+	position: relative;
+	/* animation: myani2 2s infinite linear; */
+	transform: rotate(-85deg);
+	transform-origin: center;
+}
+@keyframes myani2 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.circle-container {
+	width: 100px;
+	height: 20px;
+	/* background-color: rgba(0, 128, 0, 0.295); */
+
+	position: absolute;
+	top: 50%;
+	left: 15px;
+
+	transform: translate(0%, -50%);
+
+	border-radius: 100px;
+
+	transform-origin: left;
+	animation: myani 2s infinite cubic-bezier(0.19, 1, 0.22, 1);
+}
+.circle {
+	width: 20px;
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0.788);
+
+	border-radius: 50%;
+
+	position: absolute;
+	right: 0;
+
+	display: inline-block;
+	/* box-shadow: 0 0 12px  rgba(0, 0, 0, 0.05); */
+}
+
+@keyframes myani {
+	from {
+		top: 50%;
+		left: 10px;
+		transform: translate(0%, -50%) rotate(0deg);
+	}
+	to {
+		top: 50%;
+		left: 10px;
+		transform: translate(0%, -50%) rotate(360deg);
+	}
+}
